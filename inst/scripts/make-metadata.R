@@ -45,7 +45,7 @@ metadata <- data.frame(
   Coordinate_1_based = TRUE,
   Maintainer = "Zhaozhen Du <duzhaozhen2022@sinh.ac.cn>",
   RDataClass = as.character(detected_classes),
-  DispatchClass = "Rds",
+  DispatchClass = "FilePath",
   ResourceName = rds_files,
   stringsAsFactors = FALSE
 )

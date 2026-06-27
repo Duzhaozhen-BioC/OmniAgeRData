@@ -1,7 +1,7 @@
 Package: OmniAgeRData
 Type: Package
 Title: Supporting Data for the OmniAgeR Package
-Version: 0.99.3
+Version: 0.99.5
 Encoding: UTF-8
 Authors@R: 
     c(person(given = "Zhaozhen",
@@ -34,5 +34,5 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 biocViews: ExperimentHub, ExperimentData, SpecimenSource, Tissue
-RoxygenNote: 7.3.3
 Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0
