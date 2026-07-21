@@ -1,7 +1,7 @@
 Package: OmniAgeRData
 Type: Package
 Title: Supporting Data for the OmniAgeR Package
-Version: 0.99.5
+Version: 0.99.6
 Encoding: UTF-8
 Authors@R: 
     c(person(given = "Zhaozhen",
@@ -19,8 +19,8 @@ Description: This package provides aging omic biomarker model parameters and
     example data for the OmniAgeR package. It includes coefficients for 
     various aging clocks and processed validation datasets. Data is 
     hosted via ExperimentHub.
-URL: https://github.com/Duzhaozhen/OmniAgeRData
-BugReports: https://github.com/Duzhaozhen/OmniAgeRData/issues
+URL: https://github.com/Duzhaozhen-BioC/OmniAgeRData
+BugReports: https://github.com/Duzhaozhen-BioC/OmniAgeRData/issues
 License: CC BY 4.0
 Depends: R (>= 4.5.0)
 Imports: 

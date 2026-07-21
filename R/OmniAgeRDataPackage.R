@@ -32,7 +32,7 @@
 #'
 #' @seealso
 #' Useful links:
-#' * Report bugs at: \url{https://github.com/yourusername/OmniAgeRData/issues}
+#' * Report bugs at: \url{https://github.com/Duzhaozhen-BioC/OmniAgeRData/issues}
 #' * Package Vignette: \code{browseVignettes("OmniAgeRData")}
 #'
 #' @keywords internal
