@@ -81,6 +81,11 @@ machine-readable provenance and licensing manifest is available at
 \code{system.file("extdata", "weightData_resource_licences.csv",
 package = "OmniAgeRData")}.
 }
+\value{
+This is a documentation-only help topic and does not return an
+R object. Individual resources can be retrieved using
+\code{getOmniAgeRData()}.
+}
 \description{
 A collection of pre-trained aging-biomarker model weights and model-specific
 parameters used by the \code{OmniAgeR} package.

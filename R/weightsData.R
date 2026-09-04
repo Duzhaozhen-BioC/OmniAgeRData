@@ -689,6 +689,10 @@
 #' @format A collection of model-weight and parameter resources retrieved from
 #' \code{ExperimentHub} by \code{getOmniAgeRData()}.
 #'
+#' @return This is a documentation-only help topic and does not return an
+#' R object. Individual resources can be retrieved using
+#' \code{getOmniAgeRData()}.
+#'
 #' @name omniager_clock_weights
 #' @aliases omniager_abec_coef
 #' @aliases omniager_anage_data
