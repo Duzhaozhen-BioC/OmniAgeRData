@@ -11,14 +11,21 @@ This resource is a \code{list} of length 2, containing:
 }
 }
 \source{
-The original dataset was provided by the developers of the EpiMitClocks.
-\strong{GitHub Repository:} \url{https://github.com/aet21/EpiMitClocks}
+Zhu, T. et al. (2024).
+\emph{An improved epigenetic counter to track mitotic age in normal and
+precancerous tissues}. \emph{Nature Communications}, 15, 4211.
+\doi{10.1038/s41467-024-48649-8}
+
+The example files were obtained from the \code{EpiMitClocks} repository:
+\url{https://github.com/aet21/EpiMitClocks}
 
 \strong{License:}
-This example dataset is distributed under the assumption of fair use for
-academic reproduction and testing purposes, and follows the overarching
-license of the \code{OmniAgeRData} package, inherently
-respecting any open-source terms of the original \code{EpiMitClocks} repository.
+The \code{EpiMitClocks} package is licensed under the GNU General Public
+License version 2 (GPL-2.0). This derived example object retains the GPL-2.0
+terms and is not relicensed under the package-wide \code{OmniAgeRData}
+license. The upstream copyright and license notices must be retained when
+the object is redistributed. See
+\url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
 }
 \value{
 A list containing the DNA methylation beta matrix and the corresponding phenotype data frame.

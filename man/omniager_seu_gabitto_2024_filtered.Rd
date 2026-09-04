@@ -19,15 +19,26 @@ Key metadata filtering constraints applied:
 }
 }
 \source{
-The original, comprehensive dataset is hosted on the CZ CELLxGENE portal.
-\strong{Dataset URL:} \url{https://datasets.cellxgene.cziscience.com/9d53f7bb-dc23-4c05-b2a6-4afa9a6e3be0.rds}
+Gabitto, M. I. et al. (2024).
+\emph{Integrated multimodal cell atlas of Alzheimer's disease}.
+\emph{Nature Neuroscience}, 27, 2366--2383.
+\doi{10.1038/s41593-024-01774-5}
+
+The source data were obtained from the CZ CELLxGENE Discover collection
+\emph{SEA-AD: Seattle Alzheimer's Disease Brain Cell Atlas}:
+\url{https://cellxgene.cziscience.com/collections/1ca90a2d-2943-483d-b678-b809bf464c30}
+
+Source dataset file:
+\url{https://datasets.cellxgene.cziscience.com/9d53f7bb-dc23-4c05-b2a6-4afa9a6e3be0.rds}
 
 \strong{License:}
-Data hosted on CELLxGENE are typically distributed under permissive open-access
-licenses. This heavily filtered \code{Seurat} object is
-distributed here strictly for academic testing, reproduction, and software
-demonstration purposes, following the overarching license of the \code{OmniAgeRData}
-package.
+Public data distributed through CZ CELLxGENE Discover are licensed under the
+Creative Commons Attribution 4.0 International (CC BY 4.0) license. This
+object is a filtered subset of the source data and is distributed under the
+same CC BY 4.0 license. The original study authors and CZ CELLxGENE collection
+must be credited, and the filtering and format retention should be indicated
+when the object is reused. See
+\url{https://creativecommons.org/licenses/by/4.0/}.
 }
 \value{
 A \code{Seurat} object containing scRNA-seq expression data (counts data) and metadata.

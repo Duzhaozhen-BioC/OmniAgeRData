@@ -11,15 +11,22 @@ This resource is a \code{list} of length 2, containing:
 }
 }
 \source{
-The original dataset was provided by the Mammalian Methylation Consortium.
-\strong{Zenodo Repository:} \url{https://zenodo.org/records/7574747}
+Lu, A. T. et al. (2023).
+\emph{Universal DNA methylation age across mammalian tissues}.
+\emph{Nature Aging}, 3, 1144--1166.
+\doi{10.1038/s43587-023-00462-6}
+
+Mammalian Methylation Consortium repository:
+\url{https://github.com/shorvath/MammalianMethylationConsortium}
+
+Archived release:
+\url{https://zenodo.org/records/7574747}
 
 \strong{License:}
-The original dataset is hosted on Zenodo under an Open Access license (typically
-Creative Commons Attribution). This formatted subset is distributed here for
-academic reproduction and testing purposes, and follows the overarching
-license of the \code{OmniAgeRData} package, strictly
-respecting the permissive terms of the original Zenodo repository.
+The Mammalian Methylation Consortium repository is distributed under the
+MIT License. This formatted subset remains subject to the MIT License; the
+upstream copyright and permission notice must be retained. See
+\url{https://github.com/shorvath/MammalianMethylationConsortium/blob/main/LICENSE}.
 }
 \value{
 A list containing the DNA methylation beta matrix and the corresponding phenotype data frame.

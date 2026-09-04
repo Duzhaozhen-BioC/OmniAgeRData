@@ -14,15 +14,15 @@ Key metadata columns include:
 }
 }
 \source{
-The original comprehensive dataset is hosted on the CZ CELLxGENE Discover portal.
-\strong{Collection URL:} \url{https://cellxgene.cziscience.com/collections/dde06e0f-ab3b-46be-96a2-a8082383c4a1}
+The original dataset is derived from:
+\itemize{
+  \item \strong{Title:} Single-cell eQTL mapping identifies cell type–specific genetic control of autoimmune disease
+  \item \strong{Authors:} Seyhan Yazar et al. (\emph{Science}, 2022)
+  \item \strong{Source Portal:} CZ CELLxGENE Discover (\url{https://cellxgene.cziscience.com/collections/dde06e0f-ab3b-46be-96a2-a8082383c4a1})
+  \item \strong{License:} Creative Commons Attribution 4.0 International (CC BY 4.0) (\url{https://creativecommons.org/licenses/by/4.0/})
+}
 
-\strong{License:}
-Data hosted on CELLxGENE are generally distributed under permissive open-access
-licenses. This highly subsetted and downsampled \code{Seurat}
-object is distributed here strictly for academic testing and reproducibility,
-following the overarching license of the \code{OmniAgeRData} package,
-while fully respecting the original repository's open-source terms.
+This subsetted and downsampled \code{Seurat} object is redistributed in accordance with the Creative Commons Attribution 4.0 International (CC BY 4.0) license with attribution to the original authors.
 }
 \value{
 A \code{Seurat} object containing scRNA-seq expression data (counts and normalized data) and metadata.

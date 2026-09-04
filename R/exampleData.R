@@ -28,22 +28,28 @@
 #' or filtering steps were applied to the original GitHub data.
 #'
 #' @source
-#' The original example data was provided by the developers of the CTS clocks.
-#' \strong{GitHub Repository:} \url{https://github.com/HGT-UwU/CTSclocks/tree/main}
+#' Tong, H., Guo, X., Jacques, M., Luo, Q., Eynon, N., and
+#' Teschendorff, A. E. (2024).
+#' \emph{Cell-type specific epigenetic clocks to quantify biological age at
+#' cell-type resolution}. \emph{Aging}, 16, 13452--13504.
+#' \doi{10.18632/aging.206184}
+#'
+#' The example files were obtained from the \code{CTSclocks} repository:
+#' \url{https://github.com/HGT-UwU/CTSclocks}
 #'
 #' \strong{License:}
-#' These example files are distributed under the assumption of fair use for
-#' academic reproduction and testing purposes, and follow the overarching
-#' license of the \code{OmniAgeRData} package,
-#' inherently respecting any open-source terms of the original GitHub repository.
+#' The \code{CTSclocks} repository is licensed under the GNU General Public
+#' License version 3 (GPL-3.0). These derived example objects retain the
+#' GPL-3.0 terms and are not relicensed under the package-wide
+#' \code{OmniAgeRData} license. The upstream copyright and license notices must
+#' be retained when the objects are redistributed. See
+#' \url{https://www.gnu.org/licenses/gpl-3.0.html}.
 #'
 #' @return A list containing the DNA methylation beta matrix and the corresponding phenotype data frame.
 #'
 #' @aliases omniager_cts_example_data_liver omniager_cts_murphy_gse88890 omniager_cts_pai_gse112179
 #' @name omniager_cts_example_collection
 NULL
-
-
 
 
 
@@ -68,14 +74,20 @@ NULL
 #' phenotype metadata. No further processing or filtering was performed.
 #'
 #' @source
-#' The original example data was provided by the developers of the Gestational Age clock.
-#' \strong{GitHub Repository:} \url{https://github.com/akknight/PredictGestationalAge}
+#' Knight, A. K. et al. (2016).
+#' \emph{An epigenetic clock for gestational age at birth based on blood
+#' methylation data}. \emph{Genome Biology}, 17, 206.
+#' \doi{10.1186/s13059-016-1068-z}
+#'
+#' The example files were obtained from the \code{PredictGestationalAge}
+#' repository:
+#' \url{https://github.com/akknight/PredictGestationalAge}
 #'
 #' \strong{License:}
-#' The original example dataset is distributed under the \strong{MIT License} by its authors.
-#' This formatted subset is provided here for academic reproduction and testing purposes,
-#' and follows the overarching license of the \code{OmniAgeRData} package,
-#' strictly respecting the original MIT License terms.
+#' The upstream repository, including its example data, is distributed under
+#' the MIT License. This formatted object remains subject to the MIT License;
+#' the upstream copyright and permission notice must be retained. See
+#' \url{https://github.com/akknight/PredictGestationalAge/blob/master/LICENSE}.
 #'
 #' @return A list containing the DNA methylation beta matrix and the corresponding phenotype data frame.
 #'
@@ -107,22 +119,26 @@ NULL
 #' by the original variable naming. No further probe filtering was applied.
 #'
 #' @source
-#' The original dataset was provided by the developers of the EpiMitClocks.
-#' \strong{GitHub Repository:} \url{https://github.com/aet21/EpiMitClocks}
+#' Zhu, T. et al. (2024).
+#' \emph{An improved epigenetic counter to track mitotic age in normal and
+#' precancerous tissues}. \emph{Nature Communications}, 15, 4211.
+#' \doi{10.1038/s41467-024-48649-8}
+#'
+#' The example files were obtained from the \code{EpiMitClocks} repository:
+#' \url{https://github.com/aet21/EpiMitClocks}
 #'
 #' \strong{License:}
-#' This example dataset is distributed under the assumption of fair use for
-#' academic reproduction and testing purposes, and follows the overarching
-#' license of the \code{OmniAgeRData} package, inherently
-#' respecting any open-source terms of the original \code{EpiMitClocks} repository.
+#' The \code{EpiMitClocks} package is licensed under the GNU General Public
+#' License version 2 (GPL-2.0). This derived example object retains the GPL-2.0
+#' terms and is not relicensed under the package-wide \code{OmniAgeRData}
+#' license. The upstream copyright and license notices must be retained when
+#' the object is redistributed. See
+#' \url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
 #'
 #' @return A list containing the DNA methylation beta matrix and the corresponding phenotype data frame.
 #'
-#'
 #' @name omniager_lung_inv
 NULL
-
-
 
 
 #' @title Example Mammalian Dataset (Bottlenose Dolphin)
@@ -149,18 +165,24 @@ NULL
 #' No further transformations or normalizations were applied to the original beta values.
 #'
 #' @source
-#' The original dataset was provided by the Mammalian Methylation Consortium.
-#' \strong{Zenodo Repository:} \url{https://zenodo.org/records/7574747}
+#' Lu, A. T. et al. (2023).
+#' \emph{Universal DNA methylation age across mammalian tissues}.
+#' \emph{Nature Aging}, 3, 1144--1166.
+#' \doi{10.1038/s43587-023-00462-6}
+#'
+#' Mammalian Methylation Consortium repository:
+#' \url{https://github.com/shorvath/MammalianMethylationConsortium}
+#'
+#' Archived release:
+#' \url{https://zenodo.org/records/7574747}
 #'
 #' \strong{License:}
-#' The original dataset is hosted on Zenodo under an Open Access license (typically
-#' Creative Commons Attribution). This formatted subset is distributed here for
-#' academic reproduction and testing purposes, and follows the overarching
-#' license of the \code{OmniAgeRData} package, strictly
-#' respecting the permissive terms of the original Zenodo repository.
+#' The Mammalian Methylation Consortium repository is distributed under the
+#' MIT License. This formatted subset remains subject to the MIT License; the
+#' upstream copyright and permission notice must be retained. See
+#' \url{https://github.com/shorvath/MammalianMethylationConsortium/blob/main/LICENSE}.
 #'
 #' @return A list containing the DNA methylation beta matrix and the corresponding phenotype data frame.
-#'
 #'
 #' @name omniager_tursiops_example
 NULL
@@ -190,14 +212,28 @@ NULL
 #' interface with the \code{OmniAgeR} pipeline.
 #'
 #' @source
-#' The original data is derived from the Hannum et al. study (GEO Accession: GSE40279).
-#' Preprocessing pipelines reference: Luo, Q. et al. \emph{Genome Med} 15, 59 (2023).
+#' Hannum, G. et al. (2013).
+#' \emph{Genome-wide methylation profiles reveal quantitative views of human
+#' aging rates}. \emph{Molecular Cell}, 49, 359--367.
+#' \doi{10.1016/j.molcel.2012.10.016}
 #'
-#' \strong{License:}
-#' The original data was deposited in GEO as a public resource. This formatted
-#' 50-sample subset is distributed under the assumption of fair use for academic
-#' testing and reproducibility, and follows the overarching license of the
-#' \code{OmniAgeRData} package.
+#' Original data: NCBI Gene Expression Omnibus, accession GSE40279:
+#' \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279}
+#'
+#' The preprocessing procedure followed Luo, Q. et al. (2023),
+#' \emph{Genome Medicine}, 15, 59.
+#' \doi{10.1186/s13073-023-01211-5}
+#'
+#' \strong{Data-use terms:}
+#' NCBI places no restrictions on the use or distribution of data deposited in
+#' GEO, while noting that submitters may retain applicable patent, copyright,
+#' or other intellectual-property rights. See the GEO disclaimer:
+#' \url{https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html}.
+#'
+#' This object is a BMIQ-normalized 50-sample subset of GSE40279. Users should
+#' cite the original study, the GEO accession, and the preprocessing reference
+#' when reusing the object.
+#'
 #' @return A list containing the DNA methylation beta matrix and the corresponding phenotype list.
 #'
 #' @name omniager_hannum_example
@@ -227,18 +263,17 @@ NULL
 #' and BMIQ normalization, I randomly extracted a subset of 50 samples. Subsequently,
 #' the \code{EpiSCORE} R package was utilized to deconvolute and estimate the fractions
 #' of 12 distinct immune cell types based on their DNA methylation profiles. The final
-#' object bundles these derived cell fractions alongside basic clinical metadata.
+#' object bundles these derived cell fractions alongside basic clinical metadata.#'
 #'
 #' @source
-#' The original raw DNA methylation data is deposited in NODE under accession
-#' \strong{OEP000260} (\url{https://www.biosino.org/node/project/detail/OEP000260}).
+#' The original dataset is derived from:
+#' \itemize{
+#'   \item \strong{Title:} A cell-type deconvolution meta-analysis of whole blood EWAS reveals lineage-specific smoking-associated DNA methylation changes
+#'   \item \strong{Authors:} You, C. et al. (\emph{Nature Communications}, 2020)
+#'   \item \strong{NODE Accession:} OEP000260 (\url{https://www.biosino.org/node/project/detail/OEP000260})
+#'   \item \strong{License:} Open Access for academic research (National Omics Data Encyclopedia)
+#' }
 #'
-#' \strong{License:}
-#' While the raw source data requires a data access request via NODE, this specific
-#' object contains only highly derived, de-identified cell-type fraction estimates
-#' for a minimal random subset (50 samples). It is distributed under the assumption
-#' of fair use strictly for academic testing and software demonstration, following
-#' the overarching \code{OmniAgeRData} package license.
 #' @return A list containing the celltype fraction matrix and the corresponding phenotype data frame
 #' @name omniager_tzh_example_ctf
 NULL
@@ -274,15 +309,16 @@ NULL
 #' clock evaluations.
 #'
 #' @source
-#' The original comprehensive dataset is hosted on the CZ CELLxGENE Discover portal.
-#' \strong{Collection URL:} \url{https://cellxgene.cziscience.com/collections/dde06e0f-ab3b-46be-96a2-a8082383c4a1}
+#' The original dataset is derived from:
+#' \itemize{
+#'   \item \strong{Title:} Single-cell eQTL mapping identifies cell type–specific genetic control of autoimmune disease
+#'   \item \strong{Authors:} Seyhan Yazar et al. (\emph{Science}, 2022)
+#'   \item \strong{Source Portal:} CZ CELLxGENE Discover (\url{https://cellxgene.cziscience.com/collections/dde06e0f-ab3b-46be-96a2-a8082383c4a1})
+#'   \item \strong{License:} Creative Commons Attribution 4.0 International (CC BY 4.0) (\url{https://creativecommons.org/licenses/by/4.0/})
+#' }
 #'
-#' \strong{License:}
-#' Data hosted on CELLxGENE are generally distributed under permissive open-access
-#' licenses. This highly subsetted and downsampled \code{Seurat}
-#' object is distributed here strictly for academic testing and reproducibility,
-#' following the overarching license of the \code{OmniAgeRData} package,
-#' while fully respecting the original repository's open-source terms.
+#' This subsetted and downsampled \code{Seurat} object is redistributed in accordance with the Creative Commons Attribution 4.0 International (CC BY 4.0) license with attribution to the original authors.
+#'
 #' @return A \code{Seurat} object containing scRNA-seq expression data (counts and normalized data) and metadata.
 #' @name omniager_yazar_cd4t_cd8t_example
 NULL
@@ -318,14 +354,25 @@ NULL
 #' environment and the \code{OmniAgeR} analytical pipeline.
 #'
 #' @source
-#' The original dataset is hosted on the Gene Expression Omnibus (GEO).
-#' \strong{GEO Accession:} \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE254569}
+#' Fröhlich, A. S. et al. (2024).
+#' \emph{Single-nucleus transcriptomic profiling of human orbitofrontal cortex
+#' reveals convergent effects of aging and psychiatric disease}.
+#' \emph{Nature Neuroscience}, 27, 2021--2032.
+#' \doi{10.1038/s41593-024-01742-z}
 #'
-#' \strong{License:}
-#' The original data was deposited in GEO as a public resource. This highly
-#' subsetted and converted \code{Seurat} object is distributed strictly for
-#' academic testing and reproducibility, following the overarching license of
-#' the \code{OmniAgeRData} package.
+#' Original snRNA-seq data, including the processed AnnData object, are
+#' available from NCBI GEO under accession GSE254569:
+#' \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE254569}
+#'
+#' \strong{Data-use terms:}
+#' NCBI places no restrictions on the use or distribution of data deposited in
+#' GEO, while noting that submitters may retain applicable patent, copyright,
+#' or other intellectual-property rights. See the GEO disclaimer:
+#' \url{https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html}.
+#' This example object was derived by retaining oligodendrocytes from 15 healthy
+#' control donors and converting the processed AnnData object into Seurat format.
+#' Users should cite the original study and GEO accession when reusing it.
+#'
 #'
 #' @return A \code{Seurat} object containing scRNA-seq expression data (normalized data) and metadata.
 #' @name omniager_brain_frohlich_control_example_15donors
@@ -370,15 +417,27 @@ NULL
 #' preserving the integrity of the count matrices and calculated dimensional reductions.
 #'
 #' @source
-#' The original, comprehensive dataset is hosted on the CZ CELLxGENE portal.
-#' \strong{Dataset URL:} \url{https://datasets.cellxgene.cziscience.com/9d53f7bb-dc23-4c05-b2a6-4afa9a6e3be0.rds}
+#' Gabitto, M. I. et al. (2024).
+#' \emph{Integrated multimodal cell atlas of Alzheimer's disease}.
+#' \emph{Nature Neuroscience}, 27, 2366--2383.
+#' \doi{10.1038/s41593-024-01774-5}
+#'
+#' The source data were obtained from the CZ CELLxGENE Discover collection
+#' \emph{SEA-AD: Seattle Alzheimer's Disease Brain Cell Atlas}:
+#' \url{https://cellxgene.cziscience.com/collections/1ca90a2d-2943-483d-b678-b809bf464c30}
+#'
+#' Source dataset file:
+#' \url{https://datasets.cellxgene.cziscience.com/9d53f7bb-dc23-4c05-b2a6-4afa9a6e3be0.rds}
 #'
 #' \strong{License:}
-#' Data hosted on CELLxGENE are typically distributed under permissive open-access
-#' licenses. This heavily filtered \code{Seurat} object is
-#' distributed here strictly for academic testing, reproduction, and software
-#' demonstration purposes, following the overarching license of the \code{OmniAgeRData}
-#' package.
+#' Public data distributed through CZ CELLxGENE Discover are licensed under the
+#' Creative Commons Attribution 4.0 International (CC BY 4.0) license. This
+#' object is a filtered subset of the source data and is distributed under the
+#' same CC BY 4.0 license. The original study authors and CZ CELLxGENE collection
+#' must be credited, and the filtering and format retention should be indicated
+#' when the object is reused. See
+#' \url{https://creativecommons.org/licenses/by/4.0/}.
+#'
 #'
 #' @return A \code{Seurat} object containing scRNA-seq expression data (counts data) and metadata.
 #' @name omniager_seu_gabitto_2024_filtered

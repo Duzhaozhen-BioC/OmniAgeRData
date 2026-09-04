@@ -22,14 +22,22 @@ The specific datasets included are:
 }
 }
 \source{
-The original example data was provided by the developers of the CTS clocks.
-\strong{GitHub Repository:} \url{https://github.com/HGT-UwU/CTSclocks/tree/main}
+Tong, H., Guo, X., Jacques, M., Luo, Q., Eynon, N., and
+Teschendorff, A. E. (2024).
+\emph{Cell-type specific epigenetic clocks to quantify biological age at
+cell-type resolution}. \emph{Aging}, 16, 13452--13504.
+\doi{10.18632/aging.206184}
+
+The example files were obtained from the \code{CTSclocks} repository:
+\url{https://github.com/HGT-UwU/CTSclocks}
 
 \strong{License:}
-These example files are distributed under the assumption of fair use for
-academic reproduction and testing purposes, and follow the overarching
-license of the \code{OmniAgeRData} package,
-inherently respecting any open-source terms of the original GitHub repository.
+The \code{CTSclocks} repository is licensed under the GNU General Public
+License version 3 (GPL-3.0). These derived example objects retain the
+GPL-3.0 terms and are not relicensed under the package-wide
+\code{OmniAgeRData} license. The upstream copyright and license notices must
+be retained when the objects are redistributed. See
+\url{https://www.gnu.org/licenses/gpl-3.0.html}.
 }
 \value{
 A list containing the DNA methylation beta matrix and the corresponding phenotype data frame.

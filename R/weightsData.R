@@ -1,39 +1,763 @@
-#' @title OmniAgeR Aging Biomarker Model Weights and Parameters Collection
+# This file is generated from weightData_resource_licences.csv.
+# Resolve all entries with unclear or restrictive terms before replacing the
+# package source file with this draft.
+
+#' @title OmniAgeR Aging Biomarker Model Weights and Parameters
 #'
 #' @description
-#' A comprehensive collection of all pre-trained aging biomarker model weights
-#' and aging biomarker specific parameters (e.g., Horvath2013, Hannum, etc.) required
-#' by the \code{OmniAgeR} package.
+#' A collection of pre-trained aging-biomarker model weights and model-specific
+#' parameters used by the \code{OmniAgeR} package.
 #'
 #' @details
-#' This collection encompasses a diverse array of aging omic biomarker predictors
-#' (stored internally as \code{data.frame} or \code{list} objects). These datasets
-#' contain the specific features (e.g., CpGs, genes), their model weight
-#' coefficients, specific intercepts, and any internal model structures
-#' necessary for accurate age prediction.
+#' Resources are stored as \code{data.frame}, \code{list}, or fitted-model
+#' objects and are retrieved with \code{getOmniAgeRData()}. Depending on the
+#' model, a resource can contain feature identifiers, coefficients, intercepts,
+#' transformation parameters, or other fitted-model components.
 #'
-#' They are designed to be fetched dynamically via \code{getOmniAgeRData()}.
+#' The \code{OmniAgeRData} package license does not replace or broaden any
+#' upstream license. Each redistributed resource must independently have terms
+#' that permit its inclusion in Bioconductor. Publication access or a public
+#' repository, by itself, is not evidence of permission to redistribute the
+#' associated model files.
+#'
+#' @section Resource-specific provenance and licensing:
+#' The entries below identify the provider, exact source, publication citation,
+#' upstream license, and license-evidence URL recorded for each resource.
+#' A machine-readable copy is installed as
+#' \file{inst/extdata/weightData_resource_licences.csv}.
+#'
+#' \describe{
+#'   \item{\code{omniager_abec_coef}}{
+#'     Data provider: Lee Y et al.
+#'     Source: \url{https://doi.org/10.1186/s12864-020-07168-8}.
+#'     Citation: Lee Y, Haftorn KL, Denault WRP, et al. Blood-based epigenetic
+#'     estimators of chronological age in human adults using DNA methylation
+#'     data from the Illumina MethylationEPIC array. BMC Genomics.
+#'     2020;21:747. https://doi.org/10.1186/s12864-020-07168-8.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1186/s12864-020-07168-8}.
+#'   }
+#'   \item{\code{omniager_anage_data}}{
+#'     Data provider: Lu AT et al.
+#'     Source: \url{https://zenodo.org/records/7574747}.
+#'     Citation: Lu AT, Fei Z, Haghani A, et al. Universal DNA methylation age
+#'     across mammalian tissues. Nature Aging. 2023;3:1144-1166.
+#'     https://doi.org/10.1038/s43587-023-00462-6.
+#'     Upstream license: MIT in linked GitHub repository; Zenodo record has a
+#'     blank Rights/License field.
+#'     License evidence: \url{https://github.com/shorvath/MammalianMethylationConsortium/blob/v2.0.0/LICENSE}.
+#'   }
+#'   \item{\code{omniager_bernabeu_cage_coef}}{
+#'     Data provider: Bernabeu E et al.
+#'     Source: \url{https://github.com/elenabernabeu/cage_bage/tree/main/cage_predictor}.
+#'     Citation: Bernabeu E, McCartney DL, Gadd DA, et al. Refining epigenetic
+#'     prediction of chronological and biological age. Genome Medicine.
+#'     2023;15:12. https://doi.org/10.1186/s13073-023-01161-y.
+#'     Upstream license: CC BY 4.0 for the article; CC0-1.0 for data made
+#'     available in the article;.
+#'     License evidence: \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC9976489/}.
+#'   }
+#'   \item{\code{omniager_beta_c46}}{
+#'     Data provider: Salignon J et al.
+#'     Source: \url{https://github.com/jsalignon/pasta}.
+#'     Citation: Salignon J, Tsiokou M, Marqués P, et al. Pasta, a versatile
+#'     transcriptomic clock, maps the chemical and genetic determinants of
+#'     aging and rejuvenation. bioRxiv. 2025.
+#'     https://doi.org/10.1101/2025.06.04.657785.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/jsalignon/pasta/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_beta_pasta}}{
+#'     Data provider: Salignon J et al.
+#'     Source: \url{https://github.com/jsalignon/pasta}.
+#'     Citation: Salignon J, Tsiokou M, Marqués P, et al. Pasta, a versatile
+#'     transcriptomic clock, maps the chemical and genetic determinants of
+#'     aging and rejuvenation. bioRxiv. 2025.
+#'     https://doi.org/10.1101/2025.06.04.657785.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/jsalignon/pasta/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_bohlin_ga_coef}}{
+#'     Data provider: Bohlin J et al.
+#'     Source: \url{https://zenodo.org/badge/latestdoi/23951/JonBohlin/predictGA}.
+#'     Citation: Bohlin J, Haberg SE, Magnus P, et al. Prediction of
+#'     gestational age based on genome-wide differentially methylated regions.
+#'     Genome Biology. 2016;17:207. https://doi.org/10.1186/s13059-016-1063-4;
+#'     Bohlin J. predictGA (v1.0.0) [software]. Zenodo. 2016.
+#'     https://doi.org/10.5281/zenodo.60498.
+#'     Upstream license: GPL-2.0-or-later for the predictGA software
+#'     repository; the associated article is licensed under CC BY 4.0 and the
+#'     data made available in the article are subject to CC0-1.0, unless
+#'     otherwise stated.
+#'     License evidence: \url{https://github.com/JonBohlin/predictGA/blob/v1.0.0/DESCRIPTION}.
+#'   }
+#'   \item{\code{omniager_brain_celltype_specific_clocks_coef}}{
+#'     Data provider: Muralidharan C et al.
+#'     Source: \url{https://doi.org/10.1002/advs.202506109}.
+#'     Citation: Muralidharan C, Zakar-Polyák E, Adami A, et al. Human Brain
+#'     Cell-Type-Specific Aging Clocks Based on Single-Nuclei Transcriptomics.
+#'     Advanced Science. 2025;12(43):e06109.
+#'     https://doi.org/10.1002/advs.202506109.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1002/advs.202506109}.
+#'   }
+#'   \item{\code{omniager_cabec_coef}}{
+#'     Data provider: Lee Y et al.
+#'     Source: \url{https://doi.org/10.1186/s12864-020-07168-8}.
+#'     Citation: Lee Y, Haftorn KL, Denault WRP, et al. Blood-based epigenetic
+#'     estimators of chronological age in human adults using DNA methylation
+#'     data from the Illumina MethylationEPIC array. BMC Genomics.
+#'     2020;21:747. https://doi.org/10.1186/s12864-020-07168-8.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1186/s12864-020-07168-8}.
+#'   }
+#'   \item{\code{omniager_causal_clocks_coef}}{
+#'     Data provider: Ying K et al.
+#'     Source: \url{https://doi.org/10.1038/s43587-023-00557-0}.
+#'     Citation: Ying K, Liu H, Tarkhov AE, et al. Causality-enriched
+#'     epigenetic age uncouples damage and adaptation. Nature Aging.
+#'     2024;4:231–246. https://doi.org/10.1038/s43587-023-00557-0.
+#'     Upstream license: Publisher copyright.
+#'     License evidence: \url{https://www.nature.com/articles/s43587-023-00557-0}.
+#'   }
+#'   \item{\code{omniager_centenarian_coef}}{
+#'     Data provider: Dec E et al.
+#'     Source: \url{https://doi.org/10.1007/s11357-023-00731-7}.
+#'     Citation: Dec E, Clement J, Cheng K, et al. Centenarian clocks:
+#'     epigenetic clocks for validating claims of exceptional longevity.
+#'     GeroScience. 2023;45(3):1817–1835.
+#'     https://doi.org/10.1007/s11357-023-00731-7.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1007/s11357-023-00731-7}.
+#'   }
+#'   \item{\code{omniager_chip_cpg}}{
+#'     Data provider: Kirmani S et al.
+#'     Source: \url{https://doi.org/10.1038/s41467-025-59333-w}.
+#'     Citation: Kirmani S, Huan T, Van Amburg JC, et al. Epigenome-wide DNA
+#'     methylation association study of CHIP provides insight into perturbed
+#'     gene regulation. Nature Communications. 2025;16:4678.
+#'     https://doi.org/10.1038/s41467-025-59333-w.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1038/s41467-025-59333-w}.
+#'   }
+#'   \item{\code{omniager_coeff_smk_idx}}{
+#'     Data provider: Teschendorff AE et al.
+#'     Source: \url{https://doi.org/10.1001/jamaoncol.2015.1053}.
+#'     Citation: Teschendorff AE, Yang Z, Wong A, et al. Correlation of
+#'     Smoking-Associated DNA Methylation Changes in Buccal Cells With DNA
+#'     Methylation Changes in Epithelial Cancer. JAMA Oncology.
+#'     2015;1(4):476–485. https://doi.org/10.1001/jamaoncol.2015.1053.
+#'     Upstream license: Author-granted permission for redistribution;
+#'     original article published by JAMA Oncology under publisher terms.
+#'     License evidence: \url{https://jamanetwork.com/journals/jamaoncology/fullarticle/2293216}.
+#'   }
+#'   \item{\code{omniager_cortical_clock_coef}}{
+#'     Data provider: Shireby GL et al.
+#'     Source: \url{https://github.com/gemmashireby/CorticalClock/tree/master/PredCorticalAge}.
+#'     Citation: Shireby GL, Davies JP, Francis PT, et al. Recalibrating the
+#'     epigenetic clock: implications for assessing biological age in the
+#'     human cortex. Brain. 2020;143(12):3763–3775.
+#'     https://doi.org/10.1093/brain/awaa334.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC7805794/}.
+#'   }
+#'   \item{\code{omniager_crp_cpg}}{
+#'     Data provider: Wielscher M et al.
+#'     Source: \url{https://doi.org/10.6084/m9.figshare.19188674.v1}.
+#'     Citation: Wielscher M, Mandaviya PR, Kuehnel B, et al. DNA methylation
+#'     signature of chronic low-grade inflammation and its role in
+#'     cardio-respiratory diseases. Nature Communications. 2022;13:2408.
+#'     https://doi.org/10.1038/s41467-022-29792-6.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://figshare.com/articles/dataset/association_results_from_trans_ethnic_meta_analysis/19188674}.
+#'   }
+#'   \item{\code{omniager_cts_clocks_coef}}{
+#'     Data provider: Tong H et al.
+#'     Source: \url{https://github.com/HGT-UwU/CTSclocks}.
+#'     Citation: Tong H, Guo X, Jacques M, et al. Cell-type specific
+#'     epigenetic clocks to quantify biological age at cell-type resolution.
+#'     Aging. 2024;16(22):13452–13504. https://doi.org/10.18632/aging.206184.
+#'     Upstream license: GPL-3.0 (CTSclocks software/model files); article
+#'     published under CC BY 4.0.
+#'     License evidence: \url{https://github.com/HGT-UwU/CTSclocks/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_cvfit_c46}}{
+#'     Data provider: Salignon J et al.
+#'     Source: \url{https://github.com/jsalignon/pasta}.
+#'     Citation: Salignon J, Tsiokou M, Marqués P, et al. Pasta, a versatile
+#'     transcriptomic clock, maps the chemical and genetic determinants of
+#'     aging and rejuvenation. bioRxiv. 2025.
+#'     https://doi.org/10.1101/2025.06.04.657785.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/jsalignon/pasta/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_cvfit_pasta}}{
+#'     Data provider: Salignon J et al.
+#'     Source: \url{https://github.com/jsalignon/pasta}.
+#'     Citation: Salignon J, Tsiokou M, Marqués P, et al. Pasta, a versatile
+#'     transcriptomic clock, maps the chemical and genetic determinants of
+#'     aging and rejuvenation. bioRxiv. 2025.
+#'     https://doi.org/10.1101/2025.06.04.657785.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/jsalignon/pasta/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_cvfit_reg}}{
+#'     Data provider: Salignon J et al.
+#'     Source: \url{https://github.com/jsalignon/pasta}.
+#'     Citation: Salignon J, Tsiokou M, Marqués P, et al. Pasta, a versatile
+#'     transcriptomic clock, maps the chemical and genetic determinants of
+#'     aging and rejuvenation. bioRxiv. 2025.
+#'     https://doi.org/10.1101/2025.06.04.657785.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/jsalignon/pasta/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_dnam_ctf_model}}{
+#'     Data provider: Du Zhaozhen.
+#'     Upstream license: Project-authored model coefficients.
+#'   }
+#'   \item{\code{omniager_dnamfitage_coef}}{
+#'     Data provider: McGreevy KM et al.
+#'     Source: \url{https://github.com/kristenmcgreevy/DNAmFitAge}.
+#'     Citation: McGreevy KM, Radak Z, Torma F, et al. DNAmFitAge: biological
+#'     age indicator incorporating physical fitness. Aging.
+#'     2023;15(10):3904-3938. https://doi.org/10.18632/aging.204538.
+#'     Upstream license: CC BY 3.0.
+#'     License evidence: \url{https://www.aging-us.com/article/204538}.
+#'   }
+#'   \item{\code{omniager_dnamtl_coef}}{
+#'     Data provider: Lu AT et al.
+#'     Source: \url{https://doi.org/10.18632/aging.102173}.
+#'     Citation: Lu AT, Seeboth A, Tsai PC, et al. DNA methylation-based
+#'     estimator of telomere length. Aging. 2019;11(16):5895–5923.
+#'     https://doi.org/10.18632/aging.102173.
+#'     Upstream license: CC BY 3.0.
+#'     License evidence: \url{https://www.aging-us.com/article/102173/text}.
+#'   }
+#'   \item{\code{omniager_dunedinpace_model}}{
+#'     Data provider: Belsky DW et al.
+#'     Source: \url{https://github.com/danbelsky/DunedinPACE}.
+#'     Citation: Belsky DW, Caspi A, Corcoran DL, et al. DunedinPACE, a DNA
+#'     methylation biomarker of the pace of aging. eLife. 2022;11:e73420.
+#'     https://doi.org/10.7554/eLife.73420.
+#'     Upstream license: GPL-3.0 plus an additional repository
+#'     research-only/non-commercial notice.
+#'     License evidence: \url{https://github.com/danbelsky/DunedinPACE/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_eabec_coef}}{
+#'     Data provider: Lee Y et al.
+#'     Source: \url{https://doi.org/10.1186/s12864-020-07168-8}.
+#'     Citation: Lee Y, Haftorn KL, Denault WRP, et al. Blood-based epigenetic
+#'     estimators of chronological age in human adults using DNA methylation
+#'     data from the Illumina MethylationEPIC array. BMC Genomics.
+#'     2020;21:747. https://doi.org/10.1186/s12864-020-07168-8.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1186/s12864-020-07168-8}.
+#'   }
+#'   \item{\code{omniager_ensembleage_coef}}{
+#'     Data provider: Haghani A. et al.
+#'     Source: \url{https://doi.org/10.1007/s11357-025-01808-1}.
+#'     Citation: Haghani A, Lu AT, Yan Q, et al. EnsembleAge: enhancing
+#'     epigenetic age assessment with a multi-clock framework. GeroScience.
+#'     2026;48:2873–2886. https://doi.org/10.1007/s11357-025-01808-1.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1007/s11357-025-01808-1}.
+#'   }
+#'   \item{\code{omniager_epic_ga_coef}}{
+#'     Data provider: Haftorn KL et al.
+#'     Source: \url{https://doi.org/10.1186/s13148-021-01055-z}.
+#'     Citation: Haftorn KL, Lee Y, Denault WRP, et al. An EPIC predictor of
+#'     gestational age and its application to newborns conceived by assisted
+#'     reproductive technologies. Clinical Epigenetics. 2021;13:82.
+#'     https://doi.org/10.1186/s13148-021-01055-z.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1186/s13148-021-01055-z}.
+#'   }
+#'   \item{\code{omniager_epicmit_model}}{
+#'     Data provider: Duran-Ferrer M et al.
+#'     Source: \url{https://github.com/aet21/EpiMitClocks}.
+#'     Citation: Duran-Ferrer M, Clot G, Nadeu F, et al. The proliferative
+#'     history shapes the DNA methylome of B-cell tumors and predicts clinical
+#'     outcome. Nature Cancer. 2020;1(11):1066–1081.
+#'     https://doi.org/10.1038/s43018-020-00131-2.
+#'     Upstream license: GPL-2.0.
+#'     License evidence: \url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
+#'   }
+#'   \item{\code{omniager_episcores_coef}}{
+#'     Data provider: Gadd DA et al.
+#'     Source: \url{https://zenodo.org/records/7154750}.
+#'     Citation: Gadd DA, Hillary RF, McCartney DL, et al. Epigenetic scores
+#'     for the circulating proteome as tools for disease prediction. eLife.
+#'     2022;11:e71802. https://doi.org/10.7554/eLife.71802.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://zenodo.org/records/7154750}.
+#'   }
+#'   \item{\code{omniager_epitoc1_model}}{
+#'     Data provider: Yang Z et al.
+#'     Source: \url{https://github.com/aet21/EpiMitClocks}.
+#'     Citation: Yang Z, Wong A, Kuh D, et al. Correlation of an epigenetic
+#'     mitotic clock with cancer risk. Genome Biology. 2016;17:205.
+#'     https://doi.org/10.1186/s13059-016-1064-3.
+#'     Upstream license: GPL-2.0.
+#'     License evidence: \url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
+#'   }
+#'   \item{\code{omniager_epitoc2_model}}{
+#'     Data provider: Teschendorff AE.
+#'     Source: \url{https://github.com/aet21/EpiMitClocks}.
+#'     Citation: Teschendorff AE. A comparison of epigenetic mitotic-like
+#'     clocks for cancer risk prediction. Genome Medicine. 2020;12:56.
+#'     https://doi.org/10.1186/s13073-020-00752-3.
+#'     Upstream license: GPL-2.0.
+#'     License evidence: \url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
+#'   }
+#'   \item{\code{omniager_epitoc3_model}}{
+#'     Data provider: Teschendorff AE.
+#'     Source: \url{https://github.com/aet21/EpiMitClocks}.
+#'     Citation: Teschendorff AE. GitHub repository.
+#'     https://github.com/aet21/EpiMitClocks.
+#'     Upstream license: GPL-2.0.
+#'     License evidence: \url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
+#'   }
+#'   \item{\code{omniager_garagnani_coef}}{
+#'     Data provider: Garagnani, P et al.
+#'     Source: \url{https://doi.org/10.1111/acel.12005}.
+#'     Citation: Garagnani, P et al. DOI: 10.1111/acel.12005.
+#'     https://doi.org/10.1111/acel.12005.
+#'     Upstream license: Project-authored implementation
+#'     License evidence: \url{https://doi.org/10.1111/acel.12005}.
+#'   }
+#'   \item{\code{omniager_grimage1_model}}{
+#'     Data provider: Lu AT et al.
+#'     Source: \url{https://github.com/bio-learn/biolearn/tree/master/biolearn/data}.
+#'     Citation: Lu AT, Quach A, Wilson JG, et al. DNA methylation GrimAge
+#'     strongly predicts lifespan and healthspan. Aging. 2019;11(2):303–327.
+#'     https://doi.org/10.18632/aging.101684.
+#'     Upstream license: BSD-3-Clause.
+#'     License evidence: \url{https://github.com/bio-learn/biolearn/blob/master/LICENSE}.
+#'   }
+#'   \item{\code{omniager_grimage2_model}}{
+#'     Data provider: Lu AT et al.
+#'     Source: \url{https://github.com/bio-learn/biolearn/tree/master/biolearn/data}.
+#'     Citation: Lu AT, Binder AM, Zhang J, et al. DNA methylation GrimAge
+#'     version 2. Aging. 2022;14(23):9484–9549.
+#'     https://doi.org/10.18632/aging.204434.
+#'     Upstream license: BSD-3-Clause.
+#'     License evidence: \url{https://github.com/bio-learn/biolearn/blob/master/LICENSE}.
+#'   }
+#'   \item{\code{omniager_hannum}}{
+#'     Data provider: Hannum G et al.
+#'     Source: \url{https://doi.org/10.1016/j.molcel.2012.10.016}.
+#'     Citation: Hannum G, Guinney J, Zhao L, et al. Genome-wide methylation
+#'     profiles reveal quantitative views of human aging rates. Molecular
+#'     Cell. 2013;49(2):359–367. https://doi.org/10.1016/j.molcel.2012.10.016.
+#'     Upstream license: Elsevier publisher copyright.
+#'     License evidence: \url{https://doi.org/10.1016/j.molcel.2012.10.016}.
+#'   }
+#'   \item{\code{omniager_hepato_xu_coef}}{
+#'     Data provider: Xu Rh et al.
+#'     Source: \url{https://doi.org/10.1038/nmat4997}.
+#'     Citation: Xu RH, Wei W, Krawczyk M, et al. Circulating tumour DNA
+#'     methylation markers for diagnosis and prognosis of hepatocellular
+#'     carcinoma. Nature Materials. 2017;16(11):1155–1161.
+#'     https://doi.org/10.1038/nmat4997.
+#'     Upstream license: Springer Nature copyright.
+#'     License evidence: \url{https://doi.org/10.1038/nmat4997}.
+#'   }
+#'   \item{\code{omniager_horvath2013_coef}}{
+#'     Data provider: Horvath S.
+#'     Source: \url{https://doi.org/10.1186/gb-2013-14-10-r115}.
+#'     Citation: Horvath S. DNA methylation age of human tissues and cell
+#'     types. Genome Biology. 2013;14(10):R115.
+#'     https://doi.org/10.1186/gb-2013-14-10-r115.
+#'     Upstream license: CC BY 2.0.
+#'     License evidence: \url{https://doi.org/10.1186/gb-2013-14-10-r115}.
+#'   }
+#'   \item{\code{omniager_horvath2018_coef}}{
+#'     Data provider: Horvath S et al.
+#'     Source: \url{https://doi.org/10.18632/aging.101508}.
+#'     Citation: Horvath S, Oshima J, Martin GM, et al. Epigenetic clock for
+#'     skin and blood cells applied to Hutchinson Gilford Progeria Syndrome
+#'     and ex vivo studies. Aging. 2018;10(7):1758–1775.
+#'     https://doi.org/10.18632/aging.101508.
+#'     Upstream license: CC BY 3.0.
+#'     License evidence: \url{https://www.aging-us.com/article/101508/text}.
+#'   }
+#'   \item{\code{omniager_hypoclock_cpg}}{
+#'     Data provider: Teschendorff AE.
+#'     Source: \url{https://github.com/aet21/EpiMitClocks}.
+#'     Citation: Teschendorff AE. A comparison of epigenetic mitotic-like
+#'     clocks for cancer risk prediction. Genome Medicine. 2020;12(1):56.
+#'     https://doi.org/10.1186/s13073-020-00752-3.
+#'     Upstream license: GPL-2.0.
+#'     License evidence: \url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
+#'   }
+#'   \item{\code{omniager_ic_clock_coef}}{
+#'     Data provider: Fuentealba M et al.
+#'     Source: \url{https://doi.org/10.1038/s43587-025-00883-5}.
+#'     Citation: Fuentealba M, Rouch L, Guyonnet S, et al. A blood-based
+#'     epigenetic clock for intrinsic capacity predicts mortality and is
+#'     associated with clinical, immunological and lifestyle factors. Nature
+#'     Aging. 2025;5(7):1207–1216. https://doi.org/10.1038/s43587-025-00883-5.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1038/s43587-025-00883-5}.
+#'   }
+#'   \item{\code{omniager_il6_coef}}{
+#'     Data provider: Stevenson AJ et al.
+#'     Source: \url{https://doi.org/10.1093/gerona/glab046}.
+#'     Citation: Stevenson AJ, Gadd DA, Hillary RF, et al. Creating and
+#'     validating a DNA methylation-based proxy for interleukin-6. The
+#'     Journals of Gerontology: Series A. 2021;76(12):2284–2292.
+#'     https://doi.org/10.1093/gerona/glab046.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1093/gerona/glab046}.
+#'   }
+#'   \item{\code{omniager_intrin_clock_coef}}{
+#'     Data provider: Tomusiak A et al.
+#'     Source: \url{https://doi.org/10.5281/zenodo.10426597}.
+#'     Citation: Tomusiak A, Floro A, Tiwari R, et al. Development of an
+#'     epigenetic clock resistant to changes in immune cell composition.
+#'     Communications Biology. 2024;7(1):934.
+#'     https://doi.org/10.1038/s42003-024-06609-4.
+#'     Upstream license: CC BY-NC-ND 4.0 for the article.
+#'     License evidence: \url{https://doi.org/10.1038/s42003-024-06609-4}.
+#'   }
+#'   \item{\code{omniager_knight_ga_coef}}{
+#'     Data provider: Knight AK et al.
+#'     Source: \url{https://github.com/akknight/PredictGestationalAge}.
+#'     Citation: Knight AK, Craig JM, Theda C, et al. An epigenetic clock for
+#'     gestational age at birth based on blood methylation data. Genome
+#'     Biology. 2016;17(1):206. https://doi.org/10.1186/s13059-016-1068-z.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/akknight/PredictGestationalAge/blob/master/LICENSE}.
+#'   }
+#'   \item{\code{omniager_lee_ga_coef}}{
+#'     Data provider: Lee Y et al.
+#'     Source: \url{https://doi.org/10.18632/aging.102049}.
+#'     Citation: Lee Y, Choufani S, Weksberg R, et al. Placental epigenetic
+#'     clocks: estimating gestational age using placental DNA methylation
+#'     levels. Aging. 2019;11(12):4238–4253.
+#'     https://doi.org/10.18632/aging.102049.
+#'     Upstream license: CC BY 3.0.
+#'     License evidence: \url{https://www.aging-us.com/article/102049/text}.
+#'   }
+#'   \item{\code{omniager_lin_coef}}{
+#'     Data provider: Lin Q et al.
+#'     Source: \url{https://doi.org/10.18632/aging.100908}.
+#'     Citation: Lin Q, Weidner CI, Costa IG, et al. DNA methylation levels at
+#'     individual age-associated CpG sites can be indicative for life
+#'     expectancy. Aging. 2016;8(2):394–401.
+#'     https://doi.org/10.18632/aging.100908.
+#'     Upstream license: CC BY 3.0.
+#'     License evidence: \url{https://www.aging-us.com/article/100908/text}.
+#'   }
+#'   \item{\code{omniager_mayne_ga_coef}}{
+#'     Data provider: Mayne BT et al.
+#'     Source: \url{https://doi.org/10.2217/epi-2016-0103}.
+#'     Citation: Mayne BT, Leemaqz SY, Smith AK, et al. Accelerated placental
+#'     aging in early onset preeclampsia pregnancies identified by DNA
+#'     methylation. Epigenomics. 2017;9(3):279–289.
+#'     https://doi.org/10.2217/epi-2016-0103.
+#'     Upstream license: CC BY-NC-ND 4.0.
+#'     License evidence: \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC6040051/}.
+#'   }
+#'   \item{\code{omniager_mccartney_trait_coef}}{
+#'     Data provider: McCartney DL et al.
+#'     Source: \url{https://doi.org/10.1186/s13059-018-1514-1}.
+#'     Citation: McCartney DL, Hillary RF, Stevenson AJ, et al. Epigenetic
+#'     prediction of complex traits and death. Genome Biology. 2018;19(1):136.
+#'     https://doi.org/10.1186/s13059-018-1514-1.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1186/s13059-018-1514-1}.
+#'   }
+#'   \item{\code{omniager_pan_mammalian_blood_coef}}{
+#'     Data provider: Lu AT et al.
+#'     Source: \url{https://github.com/shorvath/MammalianMethylationConsortium/tree/v4.0.0}.
+#'     Citation: Lu AT, Fei Z, Haghani A, et al. Universal DNA methylation age
+#'     across mammalian tissues. Nature Aging. 2023;3:1144-1166.
+#'     https://doi.org/10.1038/s43587-023-00462-6.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/shorvath/MammalianMethylationConsortium/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_pan_mammalian_clock_coef}}{
+#'     Data provider: Lu AT et al.
+#'     Source: \url{https://github.com/shorvath/MammalianMethylationConsortium/tree/v4.0.0}.
+#'     Citation: Lu AT, Fei Z, Haghani A, et al. Universal DNA methylation age
+#'     across mammalian tissues. Nature Aging. 2023;3:1144-1166.
+#'     https://doi.org/10.1038/s43587-023-00462-6.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/shorvath/MammalianMethylationConsortium/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_pan_mammalian_skin_coef}}{
+#'     Data provider: Lu AT et al.
+#'     Source: \url{https://github.com/shorvath/MammalianMethylationConsortium/tree/v4.0.0}.
+#'     Citation: Lu AT, Fei Z, Haghani A, et al. Universal DNA methylation age
+#'     across mammalian tissues. Nature Aging. 2023;3:1144-1166.
+#'     https://doi.org/10.1038/s43587-023-00462-6.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/shorvath/MammalianMethylationConsortium/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_pasta_gene}}{
+#'     Data provider: Salignon J et al.
+#'     Source: \url{https://github.com/jsalignon/pasta}.
+#'     Citation: Salignon J, Tsiokou M, Marqués P, et al. Pasta, a versatile
+#'     transcriptomic clock, maps the chemical and genetic determinants of
+#'     aging and rejuvenation. bioRxiv. 2025.
+#'     https://doi.org/10.1101/2025.06.04.657785.
+#'     Upstream license: MIT.
+#'     License evidence: \url{https://github.com/jsalignon/pasta/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_pedbe_coef}}{
+#'     Data provider: McEwen LM et al.
+#'     Source: \url{https://doi.org/10.1073/pnas.1820843116}.
+#'     Citation: McEwen LM, O'Donnell KJ, McGill MG, et al. The PedBE clock
+#'     accurately estimates DNA methylation age in pediatric buccal cells.
+#'     Proceedings of the National Academy of Sciences of the United States of
+#'     America. 2020;117(38):23329–23335.
+#'     https://doi.org/10.1073/pnas.1820843116.
+#'     Upstream license: Published under the PNAS license.
+#'     License evidence: \url{https://www.pnas.org/doi/10.1073/pnas.1820843116}.
+#'   }
+#'   \item{\code{omniager_phenoage_coef}}{
+#'     Data provider: Levine ME et al.
+#'     Source: \url{https://doi.org/10.18632/aging.101414}.
+#'     Citation: Levine ME et al. DOI: 10.18632/aging.101414.
+#'     https://doi.org/10.18632/aging.101414.
+#'     Upstream license: CC BY 3.0.
+#'     License evidence: \url{https://www.aging-us.com/article/101414/text}.
+#'   }
+#'   \item{\code{omniager_pipek_elasticnet_coef}}{
+#'     Data provider: Pipek et al.
+#'     Source: \url{https://doi.org/10.1007/s10910-022-01381-4}.
+#'     Citation: Pipek OA, Csabai I. A revised multi-tissue, multi-platform
+#'     epigenetic clock model for methylation array data. Journal of
+#'     Mathematical Chemistry. 2023;61(2):376–388.
+#'     https://doi.org/10.1007/s10910-022-01381-4.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1007/s10910-022-01381-4}.
+#'   }
+#'   \item{\code{omniager_pipek_filteredh_coef}}{
+#'     Data provider: Pipek et al.
+#'     Source: \url{https://doi.org/10.1007/s10910-022-01381-4}.
+#'     Citation: Pipek OA, Csabai I. A revised multi-tissue, multi-platform
+#'     epigenetic clock model for methylation array data. Journal of
+#'     Mathematical Chemistry. 2023;61(2):376–388.
+#'     https://doi.org/10.1007/s10910-022-01381-4.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1007/s10910-022-01381-4}.
+#'   }
+#'   \item{\code{omniager_pipek_retrainedh_coef}}{
+#'     Data provider: Pipek et al.
+#'     Source: \url{https://doi.org/10.1007/s10910-022-01381-4}.
+#'     Citation: Pipek OA, Csabai I. A revised multi-tissue, multi-platform
+#'     epigenetic clock model for methylation array data. Journal of
+#'     Mathematical Chemistry. 2023;61(2):376–388.
+#'     https://doi.org/10.1007/s10910-022-01381-4.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1007/s10910-022-01381-4}.
+#'   }
+#'   \item{\code{omniager_replitali_coef}}{
+#'     Data provider: Endicott JL et al.
+#'     Source: \url{https://github.com/aet21/EpiMitClocks}.
+#'     Citation: Endicott JL, Nolte PA, Shen H, et al. Cell division drives
+#'     DNA methylation loss in late-replicating domains in primary human
+#'     cells. Nature Communications. 2022;13(1):6659.
+#'     https://doi.org/10.1038/s41467-022-34268-8.
+#'     Upstream license: GPL-2.0.
+#'     License evidence: \url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
+#'   }
+#'   \item{\code{omniager_retroage_coef}}{
+#'     Data provider: Ndhlovu LC et al.
+#'     Source: \url{https://doi.org/10.1111/acel.14288}.
+#'     Citation: Ndhlovu LC, Bendall ML, Dwaraka V, et al. Retro-age: A unique
+#'     epigenetic biomarker of aging captured by DNA methylation states of
+#'     retroelements. Aging Cell. 2024;23(10):e14288.
+#'     https://doi.org/10.1111/acel.14288.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1111/acel.14288}.
+#'   }
+#'   \item{\code{omniager_scimmuaging_model}}{
+#'     Data provider: Li W et al.
+#'     Source: \url{https://github.com/CiiM-Bioinformatics-group/scImmuAging}.
+#'     Citation: Li, W., et al. Single-cell immune aging clocks reveal
+#'     inter-individual heterogeneity during infection and vaccination. Nat
+#'     Aging (2025). https://doi.org/10.1038/s43587-025-00819-z.
+#'     Upstream license: Apache-2.0.
+#'     License evidence: \url{https://github.com/CiiM-Bioinformatics-group/scImmuAging/blob/main/LICENSE}.
+#'   }
+#'   \item{\code{omniager_stemtoc_cpg}}{
+#'     Data provider: Zhu T et al.
+#'     Source: \url{https://github.com/aet21/EpiMitClocks}.
+#'     Citation: Zhu T, Tong H, Du Z, et al. An improved epigenetic counter to
+#'     track mitotic age in normal and precancerous tissues. Nature
+#'     Communications. 2024;15:4211.
+#'     https://doi.org/10.1038/s41467-024-48649-8.
+#'     Upstream license: GPL-2.0.
+#'     License evidence: \url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
+#'   }
+#'   \item{\code{omniager_stemtocvitro_cpg}}{
+#'     Data provider: Zhu T et al.
+#'     Source: \url{https://github.com/aet21/EpiMitClocks}.
+#'     Citation: Zhu T, Tong H, Du Z, et al. An improved epigenetic counter to
+#'     track mitotic age in normal and precancerous tissues. Nature
+#'     Communications. 2024;15:4211.
+#'     https://doi.org/10.1038/s41467-024-48649-8.
+#'     Upstream license: GPL-2.0.
+#'     License evidence: \url{https://github.com/aet21/EpiMitClocks/blob/master/DESCRIPTION}.
+#'   }
+#'   \item{\code{omniager_stoch_clocks}}{
+#'     Data provider: Tong H et al.
+#'     Source: \url{https://doi.org/10.1038/s43587-024-00600-8}.
+#'     Citation: Tong H, Dwaraka VB, Chen Q, et al. Quantifying the stochastic
+#'     component of epigenetic aging. Nature Aging. 2024;4(6):886–901.
+#'     https://doi.org/10.1038/s43587-024-00600-8.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://doi.org/10.1038/s43587-024-00600-8}.
+#'   }
+#'   \item{\code{omniager_vidalbralo_coef}}{
+#'     Data provider: Vidal-Bralo L et al.
+#'     Source: \url{https://doi.org/10.3389/fgene.2016.00126}.
+#'     Citation: Vidal-Bralo L, Lopez-Golan Y, Gonzalez A. Simplified assay
+#'     for epigenetic age estimation in whole blood of adults. Frontiers in
+#'     Genetics. 2016;7:126. https://doi.org/10.3389/fgene.2016.00126.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2016.00126/full}.
+#'   }
+#'   \item{\code{omniager_weidner_coef}}{
+#'     Data provider: Weidner et al.
+#'     Source: \url{https://doi.org/10.1186/gb-2014-15-2-r24}.
+#'     Citation: Weidner CI, Lin Q, Koch CM, et al. Aging of blood can be
+#'     tracked by DNA methylation changes at just three CpG sites. Genome
+#'     Biology. 2014;15(2):R24. https://doi.org/10.1186/gb-2014-15-2-r24.
+#'     Upstream license: CC BY 2.0.
+#'     License evidence: \url{https://doi.org/10.1186/gb-2014-15-2-r24}.
+#'   }
+#'   \item{\code{omniager_wu_clock_coef}}{
+#'     Data provider: Wu et al.
+#'     Source: \url{https://doi.org/10.18632/aging.102399}.
+#'     Citation: Wu X, Chen W, Lin F, et al. DNA methylation profile is a
+#'     quantitative measure of biological aging in children. Aging.
+#'     2019;11(22):10031–10051. https://doi.org/10.18632/aging.102399.
+#'     Upstream license: CC BY 3.0.
+#'     License evidence: \url{https://www.aging-us.com/article/102399/text}.
+#'   }
+#'   \item{\code{omniager_zhang_clock_coef}}{
+#'     Data provider: Zhang Q et al.
+#'     Source: \url{https://github.com/qzhang314/DNAm-based-age-predictor}.
+#'     Citation: Zhang Q, Vallerga CL, Walker RM, et al. Improved precision of
+#'     epigenetic clock estimates across tissues and its implication for
+#'     biological ageing. Genome Medicine. 2019;11(1):54.
+#'     https://doi.org/10.1186/s13073-019-0667-1.
+#'     Upstream license: CC BY 4.0.
+#'     License evidence: \url{https://github.com/qzhang314/DNAm-based-age-predictor}.
+#'   }
+#'   \item{\code{omniager_zhang10_coef}}{
+#'     Data provider: Zhang Y et al.
+#'     Source: \url{https://github.com/bio-learn/biolearn/tree/master/biolearn/data}.
+#'     Citation: Zhang Y, Wilson R, Heiss J, et al. DNA methylation signatures
+#'     in peripheral blood strongly predict all-cause mortality. Nature
+#'     Communications. 2017;8:14617. https://doi.org/10.1038/ncomms14617.
+#'     Upstream license: BSD-3-Clause.
+#'     License evidence: \url{https://github.com/bio-learn/biolearn/blob/master/LICENSE}.
+#'   }
+#'   \item{\code{PCClocks_data}}{
+#'     Data provider: Higgins-Chen AT et al.
+#'     Source: \url{https://zenodo.org/records/17162604}.
+#'     Citation: Higgins-Chen AT, Thrush KL, Wang Y, et al. A computational
+#'     solution for bolstering reliability of epigenetic clocks: implications
+#'     for clinical trials and longitudinal tracking. Nature Aging.
+#'     2022;2(7):644–661. https://doi.org/10.1038/s43587-022-00248-2.
+#'     Upstream license: CC BY-NC-ND 4.0.
+#'     License evidence: \url{https://zenodo.org/records/17162604}.
+#'   }
+#'   \item{\code{SystemsAge_data}}{
+#'     Data provider: Sehgal R et al.
+#'     Source: \url{https://zenodo.org/records/17162604}.
+#'     Citation: Sehgal R, Markov Y, Qin C, et al. Systems Age: a single blood
+#'     methylation test to quantify aging heterogeneity across 11
+#'     physiological systems. Nature Aging. 2025;5(9):1880–1896.
+#'     https://doi.org/10.1038/s43587-025-00958-3.
+#'     Upstream license: CC BY-NC-ND 4.0.
+#'     License evidence: \url{https://zenodo.org/records/17162604}.
+#'   }
+#' }
 #'
 #' @source
-#' The model weights, parameters, and associated metadata were primarily extracted from the
-#' supplementary materials or provided code repositories of their respective
-#' original publications. In certain instances, model parameters were curated
-#' or adapted from established open-source computational biology frameworks
-#' (e.g., the \code{biolearn} Python package).
+#' The resources were obtained from the source records listed above. The
+#' machine-readable provenance and licensing manifest is available at
+#' \code{system.file("extdata", "weightData_resource_licences.csv",
+#' package = "OmniAgeRData")}.
 #'
-#' For a complete and detailed list of original sources (\code{SourceUrl}),
-#' data providers (\code{DataProvider}), and taxonomy info for all models,
-#' please refer to the \code{inst/extdata/metadata.csv} file provided in this package,
-#' or consult the main \code{OmniAgeR} package vignette.
-#'
-#' \strong{License:}
-#' The derived model weights and parameters (coefficients, intercepts, and specific features)
-#' extracted from published literature or open-source packages are distributed under the assumption
-#' of fair use for academic and non-commercial research purposes, and follow the
-#' overarching license of the \code{OmniAgeRData} package (e.g., GPL-3 / CC BY 4.0).
-#' For datasets sourced from open repositories (e.g., Zenodo, GitHub) or Open
-#' Access journals, they inherently follow their original permissive licenses.
-#' @return Model weights and parameters.
+#' @format A collection of model-weight and parameter resources retrieved from
+#' \code{ExperimentHub} by \code{getOmniAgeRData()}.
 #'
 #' @name omniager_clock_weights
+#' @aliases omniager_abec_coef
+#' @aliases omniager_anage_data
+#' @aliases omniager_bernabeu_cage_coef
+#' @aliases omniager_beta_c46
+#' @aliases omniager_beta_pasta
+#' @aliases omniager_bohlin_ga_coef
+#' @aliases omniager_brain_celltype_specific_clocks_coef
+#' @aliases omniager_cabec_coef
+#' @aliases omniager_causal_clocks_coef
+#' @aliases omniager_centenarian_coef
+#' @aliases omniager_chip_cpg
+#' @aliases omniager_coeff_smk_idx
+#' @aliases omniager_cortical_clock_coef
+#' @aliases omniager_crp_cpg
+#' @aliases omniager_cts_clocks_coef
+#' @aliases omniager_cvfit_c46
+#' @aliases omniager_cvfit_pasta
+#' @aliases omniager_cvfit_reg
+#' @aliases omniager_dnam_ctf_model
+#' @aliases omniager_dnamfitage_coef
+#' @aliases omniager_dnamtl_coef
+#' @aliases omniager_dunedinpace_model
+#' @aliases omniager_eabec_coef
+#' @aliases omniager_ensembleage_coef
+#' @aliases omniager_epic_ga_coef
+#' @aliases omniager_epicmit_model
+#' @aliases omniager_episcores_coef
+#' @aliases omniager_epitoc1_model
+#' @aliases omniager_epitoc2_model
+#' @aliases omniager_epitoc3_model
+#' @aliases omniager_garagnani_coef
+#' @aliases omniager_grimage1_model
+#' @aliases omniager_grimage2_model
+#' @aliases omniager_hannum
+#' @aliases omniager_hepato_xu_coef
+#' @aliases omniager_horvath2013_coef
+#' @aliases omniager_horvath2018_coef
+#' @aliases omniager_hypoclock_cpg
+#' @aliases omniager_ic_clock_coef
+#' @aliases omniager_il6_coef
+#' @aliases omniager_intrin_clock_coef
+#' @aliases omniager_knight_ga_coef
+#' @aliases omniager_lee_ga_coef
+#' @aliases omniager_lin_coef
+#' @aliases omniager_mayne_ga_coef
+#' @aliases omniager_mccartney_trait_coef
+#' @aliases omniager_pan_mammalian_blood_coef
+#' @aliases omniager_pan_mammalian_clock_coef
+#' @aliases omniager_pan_mammalian_skin_coef
+#' @aliases omniager_pasta_gene
+#' @aliases omniager_pedbe_coef
+#' @aliases omniager_phenoage_coef
+#' @aliases omniager_pipek_elasticnet_coef
+#' @aliases omniager_pipek_filteredh_coef
+#' @aliases omniager_pipek_retrainedh_coef
+#' @aliases omniager_replitali_coef
+#' @aliases omniager_retroage_coef
+#' @aliases omniager_scimmuaging_model
+#' @aliases omniager_stemtoc_cpg
+#' @aliases omniager_stemtocvitro_cpg
+#' @aliases omniager_stoch_clocks
+#' @aliases omniager_vidalbralo_coef
+#' @aliases omniager_weidner_coef
+#' @aliases omniager_wu_clock_coef
+#' @aliases omniager_zhang_clock_coef
+#' @aliases omniager_zhang10_coef
+#' @aliases PCClocks_data
+#' @aliases SystemsAge_data
 NULL
+
+

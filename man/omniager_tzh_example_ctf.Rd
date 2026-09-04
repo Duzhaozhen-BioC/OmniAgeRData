@@ -11,15 +11,13 @@ This resource is a \code{list} of length 2, containing:
 }
 }
 \source{
-The original raw DNA methylation data is deposited in NODE under accession
-\strong{OEP000260} (\url{https://www.biosino.org/node/project/detail/OEP000260}).
-
-\strong{License:}
-While the raw source data requires a data access request via NODE, this specific
-object contains only highly derived, de-identified cell-type fraction estimates
-for a minimal random subset (50 samples). It is distributed under the assumption
-of fair use strictly for academic testing and software demonstration, following
-the overarching \code{OmniAgeRData} package license.
+The original dataset is derived from:
+\itemize{
+  \item \strong{Title:} A cell-type deconvolution meta-analysis of whole blood EWAS reveals lineage-specific smoking-associated DNA methylation changes
+  \item \strong{Authors:} You, C. et al. (\emph{Nature Communications}, 2020)
+  \item \strong{NODE Accession:} OEP000260 (\url{https://www.biosino.org/node/project/detail/OEP000260})
+  \item \strong{License:} Open Access for academic research (National Omics Data Encyclopedia)
+}
 }
 \value{
 A list containing the celltype fraction matrix and the corresponding phenotype data frame
@@ -38,5 +36,5 @@ from the National Omics Data Encyclopedia (NODE). Following standard preprocessi
 and BMIQ normalization, I randomly extracted a subset of 50 samples. Subsequently,
 the \code{EpiSCORE} R package was utilized to deconvolute and estimate the fractions
 of 12 distinct immune cell types based on their DNA methylation profiles. The final
-object bundles these derived cell fractions alongside basic clinical metadata.
+object bundles these derived cell fractions alongside basic clinical metadata.#'
 }

@@ -11,14 +11,20 @@ This resource is a \code{list} of length 2, containing:
 }
 }
 \source{
-The original example data was provided by the developers of the Gestational Age clock.
-\strong{GitHub Repository:} \url{https://github.com/akknight/PredictGestationalAge}
+Knight, A. K. et al. (2016).
+\emph{An epigenetic clock for gestational age at birth based on blood
+methylation data}. \emph{Genome Biology}, 17, 206.
+\doi{10.1186/s13059-016-1068-z}
+
+The example files were obtained from the \code{PredictGestationalAge}
+repository:
+\url{https://github.com/akknight/PredictGestationalAge}
 
 \strong{License:}
-The original example dataset is distributed under the \strong{MIT License} by its authors.
-This formatted subset is provided here for academic reproduction and testing purposes,
-and follows the overarching license of the \code{OmniAgeRData} package,
-strictly respecting the original MIT License terms.
+The upstream repository, including its example data, is distributed under
+the MIT License. This formatted object remains subject to the MIT License;
+the upstream copyright and permission notice must be retained. See
+\url{https://github.com/akknight/PredictGestationalAge/blob/master/LICENSE}.
 }
 \value{
 A list containing the DNA methylation beta matrix and the corresponding phenotype data frame.
