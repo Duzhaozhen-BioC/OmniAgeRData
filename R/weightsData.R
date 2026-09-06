@@ -660,23 +660,23 @@
 #'   }
 #'   \item{\code{PCClocks_data}}{
 #'     Data provider: Higgins-Chen AT et al.
-#'     Source: \url{https://zenodo.org/records/17162604}.
+#'     Source: \url{https://zenodo.org/records/19455622}.
 #'     Citation: Higgins-Chen AT, Thrush KL, Wang Y, et al. A computational
 #'     solution for bolstering reliability of epigenetic clocks: implications
 #'     for clinical trials and longitudinal tracking. Nature Aging.
 #'     2022;2(7):644–661. https://doi.org/10.1038/s43587-022-00248-2.
-#'     Upstream license: CC BY-NC-ND 4.0.
-#'     License evidence: \url{https://zenodo.org/records/17162604}.
+#'     Upstream license: BSD-3-Clause.
+#'     License evidence: \url{https://zenodo.org/records/19455622}.
 #'   }
 #'   \item{\code{SystemsAge_data}}{
 #'     Data provider: Sehgal R et al.
-#'     Source: \url{https://zenodo.org/records/17162604}.
+#'     Source: \url{https://zenodo.org/records/19455622}.
 #'     Citation: Sehgal R, Markov Y, Qin C, et al. Systems Age: a single blood
 #'     methylation test to quantify aging heterogeneity across 11
 #'     physiological systems. Nature Aging. 2025;5(9):1880–1896.
 #'     https://doi.org/10.1038/s43587-025-00958-3.
-#'     Upstream license: CC BY-NC-ND 4.0.
-#'     License evidence: \url{https://zenodo.org/records/17162604}.
+#'     Upstream license: BSD-3-Clause.
+#'     License evidence: \url{https://zenodo.org/records/19455622}.
 #'   }
 #' }
 #'

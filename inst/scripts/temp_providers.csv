@@ -24,10 +24,10 @@ phenoage,Levine ME et al.,2018,Homo sapiens,https://doi.org/10.18632/aging.10141
 dunedinpace,Belsky DW et al.,2022,Homo sapiens,https://github.com/danbelsky/DunedinPACE,RDA,OmniAgeR:Methylation:AgingClock:Biomarker
 grimage1,Lu AT et al.,2019,Homo sapiens,https://github.com/bio-learn/biolearn/tree/master/biolearn/data,CSV,OmniAgeR:Methylation:AgingClock:Biomarker
 grimage2,Lu AT et al.,2022,Homo sapiens,https://github.com/bio-learn/biolearn/tree/master/biolearn/data,CSV,OmniAgeR:Methylation:AgingClock:Biomarker
-pcclocks,Higgins-Chen AT et al.,2022,Homo sapiens,https://zenodo.org/records/17162604,BLOB,OmniAgeR:Methylation:AgingClock:Biomarker
+pcclocks,Higgins-Chen AT et al.,2022,Homo sapiens,https://zenodo.org/records/19455622,BLOB,OmniAgeR:Methylation:AgingClock:Biomarker
 dnamfitage,McGreevy KM et al.,2023,Homo sapiens,https://github.com/kristenmcgreevy/DNAmFitAge,RDA,OmniAgeR:Methylation:AgingClock:Biomarker
 ic_clock,Fuentealba M et al.,2025,Homo sapiens,https://doi.org/10.1038/s43587-025-00883-5,XLS/XLSX,OmniAgeR:Methylation:AgingClock:Biomarker
-systemsage,Sehgal R et al.,2024,Homo sapiens,https://zenodo.org/records/17162604,BLOB,OmniAgeR:Methylation:AgingClock:Biomarker
+systemsage,Sehgal R et al.,2024,Homo sapiens,https://zenodo.org/records/19455622,BLOB,OmniAgeR:Methylation:AgingClock:Biomarker
 wu_clock,Wu et al.,2019,Homo sapiens,https://doi.org/10.18632/aging.102399,XLS/XLSX,OmniAgeR:Methylation:AgingClock:Biomarker
 bohlin_ga,Bohlin J et al.,2016,Homo sapiens,https://zenodo.org/badge/latestdoi/23951/JonBohlin/predictGA,RDA,OmniAgeR:Methylation:GestationalAge:Biomarker
 epic_ga,Haftorn KL et al.,2021,Homo sapiens,https://doi.org/10.1186/s13148-021-01055-z,XLS/XLSX,OmniAgeR:Methylation:GestationalAge:Biomarker
